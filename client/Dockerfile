@@ -13,7 +13,7 @@ ENV REACT_APP_API=$REACT_APP_API
 RUN npm run build
 
 # Stage 2: Serve with NGINX
-FROM nginx:alpine
+FROM nginx:1.29.5-alpine3.23
 
 # 🟢 Copy correct default.conf to override nginx default
 COPY default.conf /etc/nginx/conf.d/default.conf
